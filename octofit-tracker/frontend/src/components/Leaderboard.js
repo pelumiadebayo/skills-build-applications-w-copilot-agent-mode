@@ -29,7 +29,7 @@ const Leaderboard = () => {
             </thead>
             <tbody>
               {leaderboard.map((entry, idx) => (
-                <tr key={idx}>
+                <tr key={entry.id || entry.team_id || idx}>
                   <td>{idx + 1}</td>
                   <td>{entry.team_id}</td>
                   <td>{entry.points}</td>

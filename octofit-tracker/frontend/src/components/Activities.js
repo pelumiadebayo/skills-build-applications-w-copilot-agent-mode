@@ -28,7 +28,7 @@ const Activities = () => {
             </thead>
             <tbody>
               {activities.map((activity, idx) => (
-                <tr key={idx}>
+                <tr key={activity.id || idx}>
                   <td>{idx + 1}</td>
                   <td>{activity.name}</td>
                 </tr>
