@@ -19,16 +19,20 @@ class User(AbstractUser):
     )
 
 class Team(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, unique=True)
 
 class Activity(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_id = models.CharField(max_length=24)
 
 class Leaderboard(models.Model):
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    id = models.AutoField(primary_key=True)
+    team_id = models.CharField(max_length=24)
     points = models.IntegerField()
 
 class Workout(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     difficulty = models.CharField(max_length=50)

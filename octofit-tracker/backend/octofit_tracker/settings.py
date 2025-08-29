@@ -78,7 +78,9 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
+
+# Channels ASGI config
+ASGI_APPLICATION = 'octofit_tracker.asgi.application'
 
 
 # Database
